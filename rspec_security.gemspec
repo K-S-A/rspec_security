@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Sergey Konev"]
   spec.email         = ["sergey@cimon.io"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = 'Simple ad-hoc solution to add security checks for the code'
+  spec.description   = 'Performs rubocop, brakeman, bundle-audit checks as a test-cases after rspec test suite completion.'
+  spec.homepage      = "https://github.com/K-S-A/rspec_security"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

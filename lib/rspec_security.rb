@@ -1,5 +1,8 @@
-require "rspec_security/version"
+# frozen_string_literal: true
 
-module RspecSecurity
-  # Your code goes here...
+require 'rspec_security/brakeman'
+require 'rspec_security/rubocop'
+require 'rspec_security/bundler_audit'
+
+module RSpecSecurity
 end
