@@ -1,7 +1,7 @@
 require 'bundler/setup'
 require 'rspec_security'
 
-Dir[File.join(File.dirname(__dir__), 'support', '**', '*.rb')].each { |f| require f }
+Dir[File.join(File.dirname(__dir__), 'spec', 'support', '**', '*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

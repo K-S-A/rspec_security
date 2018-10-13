@@ -16,7 +16,7 @@ module RSpecSecurity
     def example_group
       @example_group ||= RSpec.describe('Brakeman issues').tap do |group|
         @example = group.example('must have zero security issues and errors', :aggregate_failures, :supress_stdout) do
-          result = ::Brakeman.run(app_path: Rails.root.to_s, output_files: ['brakeman.html'])
+          result = ::Brakeman.run(app_path: Gem::Specification.find_by_name('rspec_security').gem_dir, output_files: ['brakeman.html'])
           errors = result.errors.count
           warnings = result.warnings.count
 

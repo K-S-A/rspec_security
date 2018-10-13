@@ -16,7 +16,7 @@ module RSpecSecurity
     def example_group
       @example_group ||= RSpec.describe('Rubocop issues', :supress_stdout).tap do |group|
         @example = group.example('must have zero issues and errors') do
-          expect(RuboCop::CLI.new.run([Rails.root.to_s])).to eq(0)
+          expect(RuboCop::CLI.new.run([Gem::Specification.find_by_name('rspec_security').gem_dir])).to eq(0)
         end
       end
     end
